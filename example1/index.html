@@ -1,0 +1,23 @@
+<html ng-app="myApp">
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+        <script src="app.js"></script>
+        <title>example1</title>
+    </head>
+    <body>
+        <div ng-controller="GreetingController as main">
+            <p>
+            {{greeting}} User! The current date/time is <span> {{now | date: 'medium'}}</span>
+            </p>
+            <p class="callout">
+                {{main.data}} ...
+            </p>
+        </div>
+        <div ng-controller="ControllerWithDependency as ctrl2">
+            <p>val = {{ctrl2.foo}}</p>
+            <button ng-click="ctrl2.getNewFoo()">
+                grab from window
+            </button> 
+        </div>
+    </body>
+</html>
