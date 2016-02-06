@@ -1,0 +1,55 @@
+<br>
+<div class="panel panel-danger" ng-if="!doesDataExist()">
+  <div class="panel-heading">
+    <h3 class="panel-title">No data</h3>
+  </div>
+  <div class="panel-body">
+    Please enter some data using either the synchronized objects or the synchronized arrays button above.
+  </div>
+</div>
+
+<br>
+<div class="panel panel-info" ng-if="doesDataExist()">
+  <div class="panel-heading">
+    <h3 class="panel-title">View Properties / Functions of synchronized objects and arrays</h3>
+  </div>
+  <div class="panel-body">
+    <button type="button" class="btn btn-default" ng-click="showPropertiesAndFunctions()">
+      Show properties and functions
+    </button>
+  </div>
+</div>
+
+<br>
+<div class="panel panel-info" ng-if="doesDataExist()">
+  <div class="panel-heading">
+    <h3 class="panel-title">Properties / Functions of synchronized objects</h3>
+  </div>
+  <div class="panel-body">
+    Properties
+    <ul class="list-inline">
+      <li ng-repeat="key in objectkeys">{{key}}</li>
+    </ul>
+    Functions
+    <ul class="list-inline">
+      <li ng-repeat="function in objectfunctions">{{function}}</li>
+    </ul>
+  </div>
+</div>
+
+<br>
+<div class="panel panel-info" ng-if="doesDataExist()">
+  <div class="panel-heading">
+    <h3 class="panel-title">Properties / Functions of synchronized arrays</h3>
+  </div>
+  <div class="panel-body">
+    Properties
+    <ul class="list-inline">
+      <li ng-repeat="key in arraykeys">{{key}}</li>
+    </ul>
+    Functions
+    <ul class="list-inline">
+      <li ng-repeat="function in arrayfunctions">{{function}}</li>
+    </ul>
+  </div>
+</div>

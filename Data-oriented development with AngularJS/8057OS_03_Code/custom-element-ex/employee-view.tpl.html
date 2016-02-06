@@ -1,0 +1,11 @@
+<div>
+  <h1>Employee data (without using a directive):</h1>
+  <label for="name">Name</label>
+  <input id="name" ng-model="employeeData.first.name" />
+
+  <h5>Age-</h5>
+  {{employeeData.first.age}}
+
+  <h1>Employee data (from a directive):</h1>
+  <my-employee></my-employee>
+</div>

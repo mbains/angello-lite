@@ -1,0 +1,21 @@
+<div>
+  <h1>Employee data:</h1>
+  In a list -
+  <ul>
+    <li ng-repeat="employee in employeeData.employees">
+      Employee number {{$index}} is - {{employee.name}} - {{employee.age}} years old
+    </li>
+  </ul>
+
+  <br />In a table -
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+    <tr ng-repeat="employee in employeeData.employees | seniorEmployeesFltr">
+      <td>{{employee.name}}</td>
+      <td>{{employee.age}}</td>
+    </tr>
+  </table>
+</div>

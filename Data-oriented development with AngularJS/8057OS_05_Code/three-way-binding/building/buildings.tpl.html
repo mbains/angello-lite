@@ -1,0 +1,21 @@
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">Existing buildings</h3>
+  </div>
+  <div class="panel-body">
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <tr>
+          <th>Building No.</th>
+          <th>Building Name</th>
+        </tr>
+        <tr ng-repeat="(id, building) in buildings">
+          <td>
+            <a href="#/buildings/{{id}}">{{building.buildingNumber}}</a>
+          </td>
+          <td>{{building.buildingName}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

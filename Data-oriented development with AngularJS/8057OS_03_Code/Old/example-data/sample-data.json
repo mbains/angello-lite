@@ -1,0 +1,32 @@
+{
+  "buildings": {
+    "building1": {
+      "number": "1",
+      "name": "First Building"
+    },
+    "building2": {
+      "number": "2",
+      "name": "Second Building"
+    }
+  },
+  "apartments": {
+    "apartment1": {
+      "number": "101",
+      "belongsTo": "building1"
+    },
+    "apartment2": {
+      "number": "102",
+      "belongsTo": "building1"
+    }
+  },
+  "syncArray": {
+    "resident1": {
+      "name": "John Doe",
+      "livesIn": "apartment1"
+    },
+    "resident2": {
+      "name": "Jane Doe",
+      "livesIn": "apartment2"
+    }
+  }
+}

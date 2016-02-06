@@ -1,0 +1,14 @@
+<div>
+  <h1 style="color:forestgreen">Employee data (without using a directive):</h1>
+  <label for="name">Name</label>
+  <input id="name" ng-model="employeeData.first.name" />
+
+  <h5>Age-</h5>
+  {{employeeData.first.age}}
+
+  <h1 style="color:red">Employee data (from a directive):</h1>
+  <my-employee info="employeeData.second"></my-employee>
+
+  <h1 style="color:blueviolet">Back from the directive</h1>
+  {{employeeData.second.name}}
+</div>

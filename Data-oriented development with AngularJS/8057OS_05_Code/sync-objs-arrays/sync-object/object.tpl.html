@@ -1,0 +1,57 @@
+<br>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Create new objects</h3>
+  </div>
+  <div class="panel-body">
+    Let's add the following objects to Firebase -
+    <ul>
+      <li>
+        <b>A resident -</b>
+        {'resident': {'name': 'John Doe', 'dob': 'April 5, 1990'}}
+      </li>
+      <li>
+        <b>A string</b> - 'hi'
+      </li>
+    </ul>
+    <button type="submit" class="btn btn-primary" ng-click="addSyncObjects()" ng-disabled="doesDataExist()">
+      Add objects (is enabled only if there is no data in Existing objects below)
+    </button>
+  </div>
+</div>
+
+<br>
+<div class="panel panel-default" ng-if="doesDataExist()">
+  <div class="panel-heading">
+    <h3 class="panel-title">Update the resident object</h3>
+  </div>
+  <div class="panel-body">
+    Let's add the following property to the existing resident object -
+    <ul>
+      <li>
+        <b>An email (to make it look like) -</b>
+        {'resident': {'name': 'John Doe', 'dob': 'April 5, 1990', 'email': 'email@gmail.com'}}
+      </li>
+    </ul>
+    <button type="submit" class="btn btn-primary" ng-click="updateSyncObject()"
+            ng-disabled="doesDataExist() && hasEmailProperty()">
+      Update existing resident object
+    </button>
+  </div>
+</div>
+
+<br>
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">Existing objects</h3>
+  </div>
+  <div class="panel-body">
+    <div class="table-responsive">
+      <ul>
+        <li ng-repeat="(id, object) in syncArray">
+          {{object}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+{
+  "apartments": {
+    "apartment1": {
+      "number": "101",
+      "belongsTo": "building1",
+      "syncArray": {
+        "resident1": true
+      }
+    }
+  }
+}

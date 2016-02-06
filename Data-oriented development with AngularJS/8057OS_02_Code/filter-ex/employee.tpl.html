@@ -1,0 +1,22 @@
+<div>
+  <h1>Employee data:</h1>
+  <h3>In a table (with the filter) -</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+    <tr ng-repeat="employee in employeeData.employees | seniorEmployeesFltr">
+      <td>{{employee.name}}</td>
+      <td>{{employee.age}}</td>
+    </tr>
+  </table>
+
+  <br />
+  <h3>In a list (without the filter) -</h3>
+  <ul>
+    <li ng-repeat="employee in employeeData.employees">
+      Employee number {{$index}} is - {{employee.name}} - {{employee.age}} years old
+    </li>
+  </ul>
+</div>
